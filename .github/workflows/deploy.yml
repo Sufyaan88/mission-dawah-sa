@@ -26,10 +26,3 @@ jobs:
 
       - name: Build
         run: npm run generate
-
-      - name: Deploy to Railway
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: |
-          npm install -g @railway/cli
-          railway up --detach
