@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import AppHeader from '../../app/components/AppHeader.vue'
+import AppHeaderComponent from '../../app/components/AppHeaderComponent.vue'
 
-describe('AppHeader', () => {
+describe('AppHeaderComponent', () => {
   it('renders the temporary logo and primary page links', () => {
-    const wrapper = mount(AppHeader)
+    const wrapper = mount(AppHeaderComponent)
     const logo = wrapper.find('[data-testid="site-logo"]')
     const links = wrapper.findAll('nav a')
 

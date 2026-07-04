@@ -20,7 +20,7 @@ At the start of a new Codex session, read `docs/README.md` first, then read each
 
 ## Coding Style & Naming Conventions
 
-Use TypeScript-aware Vue single-file components. Match the existing style: two-space indentation in Vue templates where applicable, simple component structure, and clear, descriptive names. Name Vue components in PascalCase, for example `AppHeader.vue`, and place related tests with matching names such as `AppHeader.test.ts`. Prefer small, focused components in `app/components/` over expanding `app/app.vue`.
+Use TypeScript-aware Vue single-file components. Match the existing style: two-space indentation in Vue templates where applicable, simple component structure, and clear, descriptive names. Name reusable Vue components in PascalCase with a `Component` suffix, for example `AppHeaderComponent.vue`, and name matching tests `AppHeaderComponent.test.ts`. Name page tests with a `Page` suffix, for example `HomePage.test.ts`. Keep Nuxt page files named according to file-based routing conventions, such as `app/pages/index.vue` and `app/pages/tahabbu.vue`; the `Page` suffix does not apply to route files. Prefer small, focused components in `app/components/` over expanding `app/app.vue`.
 
 ## Testing Guidelines
 

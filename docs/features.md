@@ -4,16 +4,19 @@ Use this file to track future feature ideas, active work, and completed project 
 
 ## Planned
 
-- Replace the default Nuxt welcome page in `app/app.vue`.
-- Wire `AppHeader` into the app shell.
-- Build the homepage using a TDD workflow.
-- Add static pages for Feeding Scheme, Bursary, About, and Contact.
-- Add Tailwind CSS.
-- Configure custom domain, DNS, and SSL.
-- Add a contact form backed by a .NET Minimal API.
-- Containerize backend services with Docker.
-- Add PostgreSQL for future persisted data.
-- Add PayFast donations for South African payment support.
+- [x] Replace the default Nuxt welcome page in `app/app.vue`.
+- [x] Wire `AppHeaderComponent` into the app shell.
+- [x] Build the initial responsive homepage using a TDD workflow.
+- [x] Add Tailwind CSS.
+- [ ] Add a two-project carousel to the homepage.
+- [ ] Add homepage navigation cards for Tahabbu and Bursary.
+- [ ] Add the homepage contact section and footer.
+- [ ] Add static pages for Tahabbu and Bursary.
+- [ ] Configure custom domain, DNS, and SSL.
+- [ ] Add a contact form backed by a .NET Minimal API.
+- [ ] Containerize backend services with Docker.
+- [ ] Add PostgreSQL for future persisted data.
+- [ ] Add PayFast donations for South African payment support.
 
 ## In Progress
 
