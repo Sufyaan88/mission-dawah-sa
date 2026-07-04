@@ -1,18 +1,20 @@
 <script setup lang="ts">
 import HomeCarouselComponent from '../components/HomeCarouselComponent.vue'
+import ProjectCardsSectionComponent from '../components/ProjectCardsSectionComponent.vue'
 </script>
 
 <template>
   <main class="bg-[#f7f8f3]">
     <HomeCarouselComponent />
+    <ProjectCardsSectionComponent />
 
-    <section class="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-6xl items-center px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <section class="mx-auto flex min-h-[calc(100vh-5rem)] w-full max-w-6xl items-center px-4 py-16 sm:px-6 sm:py-24 lg:px-8" aria-labelledby="intro-title">
       <div>
         <p class="text-sm font-bold uppercase tracking-widest text-[#276b8a]">
           Mission Dawah South Africa
         </p>
 
-        <h2 class="mt-4 max-w-4xl text-4xl font-black leading-tight text-[#174c3c] sm:text-5xl lg:text-7xl">
+        <h2 id="intro-title" class="mt-4 max-w-4xl text-4xl font-black leading-tight text-[#174c3c] sm:text-5xl lg:text-7xl">
           Serving communities through compassion and opportunity
         </h2>
 
