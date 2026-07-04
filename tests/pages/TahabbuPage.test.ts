@@ -20,5 +20,6 @@ describe('TahabbuPage', () => {
     expect(hadith.props('source')).toBe('Jamiʿ at-Tirmidhi 2485')
     expect(donation.props('accountNumber')).toBe('63145999017')
     expect(donation.props('branchCode')).toBe('200409')
+    expect(donation.props('reference')).toBe('Meal')
   })
 })
