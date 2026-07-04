@@ -3,5 +3,6 @@
     <NuxtRouteAnnouncer />
     <AppHeaderComponent />
     <NuxtPage />
+    <AppFooterComponent />
   </div>
 </template>

@@ -3,7 +3,7 @@ import ProjectCardComponent from './ProjectCardComponent.vue'
 </script>
 
 <template>
-  <section class="bg-[#f7f8f3] px-4 py-16 sm:px-6 sm:py-24 lg:px-8" aria-labelledby="projects-title">
+  <section id="projects" class="bg-[#f7f8f3] px-4 py-16 sm:px-6 sm:py-24 lg:px-8" aria-labelledby="projects-title">
     <div class="mx-auto max-w-6xl">
       <div class="max-w-2xl">
         <p class="text-sm font-bold uppercase tracking-[0.2em] text-[#276b8a]">
