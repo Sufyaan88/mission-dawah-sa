@@ -3,13 +3,20 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 
 const slides = [
   {
+    eyebrow: 'Welcome',
+    title: 'Mission Dawah South Africa',
+    description: 'Serving communities through compassion and opportunity by strengthening food support and access to education.',
+    link: '#projects',
+    linkText: 'Explore our projects',
+    backgroundClass: 'bg-gradient-to-br from-[#18251f] via-[#315f64] to-[#276b8a]',
+  },
+  {
     eyebrow: 'Feeding communities',
     title: 'Tahabbu brings care to the table',
     description: 'Supporting families with practical food assistance rooted in dignity and compassion.',
     link: '/tahabbu',
     linkText: 'Discover Tahabbu',
     backgroundClass: 'bg-[#174c3c]',
-    accent: '01',
   },
   {
     eyebrow: 'Investing in education',
@@ -18,7 +25,6 @@ const slides = [
     link: '/bursary',
     linkText: 'Explore the Bursary',
     backgroundClass: 'bg-[#276b8a]',
-    accent: '02',
   },
 ] as const
 
@@ -75,11 +81,14 @@ onBeforeUnmount(() => {
             {{ activeSlide.linkText }}
           </a>
         </div>
-
-        <span class="pointer-events-none absolute -right-8 top-1/2 hidden -translate-y-1/2 text-[16rem] font-black leading-none text-white/10 md:block">
-          {{ activeSlide.accent }}
-        </span>
       </div>
+
+      <span
+        data-testid="slide-count"
+        class="absolute right-5 top-5 z-20 text-sm font-bold tracking-widest text-white/60 sm:right-8 sm:top-8"
+      >
+        {{ activeIndex + 1 }} / {{ slides.length }}
+      </span>
 
       <button
         class="absolute left-2 top-1/2 z-20 grid h-16 w-10 -translate-y-1/2 place-items-center text-5xl font-extralight text-white/45 drop-shadow-lg transition hover:text-white focus:outline-none focus:ring-2 focus:ring-[#e7b94c] sm:left-5"

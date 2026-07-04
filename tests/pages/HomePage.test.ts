@@ -5,13 +5,14 @@ import ProjectCardsSectionComponent from '../../app/components/ProjectCardsSecti
 import HomePage from '../../app/pages/index.vue'
 
 describe('HomePage', () => {
-  it('renders the organization introduction', () => {
+  it('keeps the organization introduction inside the carousel', () => {
     const wrapper = mount(HomePage)
+    const carousel = wrapper.findComponent(HomeCarouselComponent)
 
     expect(wrapper.find('main').exists()).toBe(true)
-    expect(wrapper.text()).toContain('Mission Dawah South Africa')
-    expect(wrapper.get('#intro-title').text()).toBe('Serving communities through compassion and opportunity')
-    expect(wrapper.text()).toContain('food support and access to education')
+    expect(carousel.text()).toContain('Mission Dawah South Africa')
+    expect(carousel.text()).toContain('Serving communities through compassion and opportunity')
+    expect(wrapper.find('#intro-title').exists()).toBe(false)
   })
 
   it('renders the project carousel', () => {
