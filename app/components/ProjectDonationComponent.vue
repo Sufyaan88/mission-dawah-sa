@@ -9,6 +9,7 @@ const props = defineProps<{
   accountType: string
   accountNumber: string
   branchCode: string
+  reference: string
   theme: 'green' | 'blue'
 }>()
 
@@ -63,6 +64,10 @@ const themeClasses = computed(() => props.theme === 'blue'
         <div class="grid gap-1 py-5 sm:grid-cols-[10rem_1fr] sm:gap-5">
           <dt class="text-sm font-bold uppercase tracking-wider text-white/60">Branch code</dt>
           <dd class="font-mono text-lg font-bold">{{ props.branchCode }}</dd>
+        </div>
+        <div class="grid gap-1 py-5 sm:grid-cols-[10rem_1fr] sm:gap-5">
+          <dt class="text-sm font-bold uppercase tracking-wider text-white/60">Reference</dt>
+          <dd class="font-bold">{{ props.reference }}</dd>
         </div>
       </dl>
     </div>

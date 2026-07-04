@@ -8,10 +8,12 @@ Use this file to track future feature ideas, active work, and completed project 
 - [x] Wire `AppHeaderComponent` into the app shell.
 - [x] Build the initial responsive homepage using a TDD workflow.
 - [x] Add Tailwind CSS.
-- [ ] Add a two-project carousel to the homepage.
-- [ ] Add homepage navigation cards for Tahabbu and Bursary.
-- [ ] Add the homepage contact section and footer.
-- [ ] Add static pages for Tahabbu and Bursary.
+- [x] Add a two-project carousel to the homepage.
+- [x] Add homepage navigation cards for Tahabbu and Bursary.
+- [x] Add the homepage contact section and footer.
+- [x] Add static pages for Tahabbu and Bursary.
+- [x] Add a responsive hamburger menu to the site header.
+- [x] Add project-specific references to the donation details.
 - [ ] Configure custom domain, DNS, and SSL.
 - [ ] Add a contact form backed by a .NET Minimal API.
 - [ ] Containerize backend services with Docker.

@@ -48,6 +48,7 @@ import ProjectGoalComponent from '../components/ProjectGoalComponent.vue'
       account-type="Islamic Gold Business Account"
       account-number="63145999017"
       branch-code="200409"
+      reference="Meal"
       theme="green"
     />
   </main>

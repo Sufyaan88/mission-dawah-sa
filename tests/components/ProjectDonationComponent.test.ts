@@ -12,6 +12,7 @@ describe('ProjectDonationComponent', () => {
         accountType: 'Islamic Gold Business Account',
         accountNumber: '63145999017',
         branchCode: '200409',
+        reference: 'Project reference',
         theme: 'green',
       },
     })
@@ -24,5 +25,7 @@ describe('ProjectDonationComponent', () => {
     expect(wrapper.text()).toContain('Islamic Gold Business Account')
     expect(wrapper.text()).toContain('63145999017')
     expect(wrapper.text()).toContain('200409')
+    expect(wrapper.text()).toContain('Reference')
+    expect(wrapper.text()).toContain('Project reference')
   })
 })
