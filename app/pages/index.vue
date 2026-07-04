@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HomeCarouselComponent from '../components/HomeCarouselComponent.vue'
+import HomeContactSectionComponent from '../components/HomeContactSectionComponent.vue'
 import ProjectCardsSectionComponent from '../components/ProjectCardsSectionComponent.vue'
 </script>
 
@@ -23,5 +24,7 @@ import ProjectCardsSectionComponent from '../components/ProjectCardsSectionCompo
         </p>
       </div>
     </section>
+
+    <HomeContactSectionComponent />
   </main>
 </template>
