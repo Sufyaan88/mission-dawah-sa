@@ -45,6 +45,12 @@ Before creating or modifying any non-documentation file, show the intended file 
 
 Recent commits use short, imperative summaries, sometimes with a conventional prefix, for example `feat: add railway config file` or `fix railway`. Keep commits focused and describe the user-visible change. Use feature branches for changes; do not commit directly to `develop` or `release`. Pull requests should include a brief summary, the tests run, linked issues when available, and screenshots for visible UI changes. Call out deployment-related changes to `.github/workflows/deploy.yml`, `railway.json`, or `nixpacks.toml`.
 
+Always provide pull request descriptions as copy-ready Markdown with these sections:
+
+- `## Summary`: what the pull request changes or adds.
+- `## Tests`: tests added or changed and verification commands run.
+- `## Deferred`: follow-up work and anything intentionally left out of scope.
+
 ## Security & Configuration Tips
 
 Do not commit secrets, tokens, or environment-specific credentials. `RAILWAY_TOKEN` is stored as a GitHub Actions repository secret for future use. Keep deployment settings in the existing Railway, Nixpacks, and GitHub Actions configuration files. Do not commit `package-lock.json`; this repo intentionally uses `npm install` in CI and Railway to avoid cross-platform lock-file issues. When changing build or deploy behavior, verify both `npm run build` and the relevant workflow/config file before merging.
