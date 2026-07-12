@@ -7,7 +7,7 @@
 - Testing: Vitest, Vue Test Utils, and happy-dom.
 - Version control: GitHub.
 - CI/CD: GitHub Actions.
-- Hosting: Railway.
+- Hosting: Netlify.
 - Future backend: .NET Minimal API, PostgreSQL, Docker, and PayFast.
 
 Nuxt was chosen over plain Vue for SEO, static generation, file-based routing, and built-in meta tag handling.
@@ -28,35 +28,31 @@ Use feature branches for all changes. Do not commit directly to `develop` or `re
 
 Pull requests into `develop` or `release` run `.github/workflows/pr-checks.yml`. The workflow checks out the repo, installs Node 22, installs dependencies, and runs `npm test`.
 
-Pushes to `release` run `.github/workflows/deploy.yml`. The workflow installs dependencies, runs tests, and builds with `npm run generate`. Railway deployment is handled by Railway's "Wait for CI" feature after the workflow passes.
+Pushes to `release` run `.github/workflows/deploy.yml`. The workflow installs dependencies, runs tests, and verifies the Netlify production build with `npm run build`. Netlify watches the `release` branch and deploys it through its Git integration.
 
 The current flow is:
 
 - Feature branch to pull request against `develop`.
 - GitHub Actions runs tests before merge.
 - Manual merge from `develop` to `release`.
-- GitHub Actions installs, tests, and builds on `release`.
-- Railway deploys automatically after CI passes.
+- GitHub Actions installs, tests, and verifies the production build on `release`.
+- Netlify builds and deploys the `release` branch automatically.
 
-## Railway
+## Netlify
 
 - Project: `mission-dawah-sa`.
 - GitHub repo: `Sufyaan88/mission-dawah-sa`.
 - Production branch: `release`.
-- Region: EU West.
-- Wait for CI: enabled.
-- Generated domain: `mission-dawah-sa-production.up.railway.app`.
-- `RAILWAY_TOKEN` exists as a GitHub Actions repository secret for future use.
+- Generated domain: `mission-dawah-sa.netlify.app`.
+- Build command: `npm run build`.
+- Publish directory: `dist`.
+- Deployment is handled by Netlify's Git integration; no Netlify deploy token is stored in GitHub.
 
-Railway uses root-level build configuration. `railway.json` documents the Railpack build and start command, while `nixpacks.toml` is the file that resolved the active Railway build commands:
-
-- Install: `npm install`.
-- Build: `npm run generate`.
-- Start: `npx serve .output/public`.
+The previous Railway-specific `railway.json` and `nixpacks.toml` files were removed after the migration.
 
 ## Dependency Install Notes
 
-Do not commit `package-lock.json`. It was removed because a Windows-generated lock file caused Railway Linux builds to fail around native `oxc-parser` bindings and npm `ci` usage. The lock file is ignored in `.gitignore`, and CI/deploy workflows use `npm install` instead of `npm ci`.
+Do not commit `package-lock.json`. It was removed because a Windows-generated lock file caused earlier Railway Linux builds to fail around native `oxc-parser` bindings and npm `ci` usage. The lock file is ignored in `.gitignore`, and CI/deploy workflows use `npm install` instead of `npm ci`.
 
 ## Local Environment
 
@@ -64,7 +60,7 @@ The project was initially verified with Node `v22.15.0`, npm `10.9.2`, and Git `
 
 ## Current Implementation
 
-The site is live at `mission-dawah-sa-production.up.railway.app`, currently showing the default Nuxt welcome page. The first TDD example is `app/components/AppHeader.vue`, covered by `tests/components/AppHeader.test.ts`. It verifies the NGO name and navigation links, but `AppHeader` still needs to be wired into `app/app.vue`.
+The site is live at `mission-dawah-sa.netlify.app`. The responsive homepage, Tahabbu page, bursary page, navigation, contact section, and footer are implemented. Reusable components and pages are covered by Vitest and Vue Test Utils tests.
 
 ## Developer Preferences
 
