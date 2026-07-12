@@ -14,7 +14,7 @@ Use this file to track future feature ideas, active work, and completed project 
 - [x] Add static pages for Tahabbu and Bursary.
 - [x] Add a responsive hamburger menu to the site header.
 - [x] Add project-specific references to the donation details.
-- [ ] Configure custom domain, DNS, and SSL.
+- [ ] Configure custom domain and DNS. Netlify provides SSL automatically.
 - [ ] Add a contact form backed by a .NET Minimal API.
 - [ ] Containerize backend services with Docker.
 - [ ] Add PostgreSQL for future persisted data.
@@ -23,7 +23,7 @@ Use this file to track future feature ideas, active work, and completed project 
 ## In Progress
 
 - Set up project documentation.
-- Maintain the current GitHub Actions and Railway deployment flow.
+- Maintain the current GitHub Actions and Netlify deployment flow.
 
 ## Completed
 
@@ -36,6 +36,7 @@ Use this file to track future feature ideas, active work, and completed project 
 - Connect Railway production deployment to the `release` branch.
 - Enable Railway Wait for CI.
 - Deploy the initial Nuxt site to `mission-dawah-sa-production.up.railway.app`.
+- Migrate production hosting from Railway to Netlify at `mission-dawah-sa.netlify.app`.
 - Remove `package-lock.json` from the repo and ignore it to avoid cross-platform CI/build issues.
 - Create contributor guidelines in `AGENTS.md`.
 
@@ -43,7 +44,7 @@ Use this file to track future feature ideas, active work, and completed project 
 
 - Phase 1 and 2: foundation, repository setup, branch strategy, TDD config, and GitHub Actions.
 - Phase 2: homepage built through TDD.
-- Phase 3: first Railway deployment from staging to production. Initial deployment is complete.
+- Phase 3: initial Railway deployment followed by migration to Netlify. Migration is complete.
 - Phase 4: remaining static pages.
 - Phase 5: custom domain, DNS, and SSL.
 - Phase 6: contact form, .NET Minimal API, and Docker.

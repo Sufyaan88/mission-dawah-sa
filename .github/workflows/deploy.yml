@@ -1,11 +1,11 @@
-name: Deploy to Railway
+name: Release Checks
 
 on:
   push:
     branches: [release]
 
 jobs:
-  deploy:
+  verify:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,4 +25,4 @@ jobs:
         run: npm test
 
       - name: Build
-        run: npm run generate
+        run: npm run build
