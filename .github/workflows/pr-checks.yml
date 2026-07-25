@@ -18,8 +18,10 @@ jobs:
 
       - name: Install dependencies
         run: |
+          node --version
+          npm --version
           rm -f package-lock.json
-          npm install
+          npm install --loglevel verbose
 
       - name: Run tests
         run: npm test
