@@ -5,7 +5,37 @@ import ProjectDonationComponent from '../../app/components/ProjectDonationCompon
 import ProjectGoalComponent from '../../app/components/ProjectGoalComponent.vue'
 import TahabbuPage from '../../app/pages/tahabbu.vue'
 
+const { useHeadMock, useSeoMetaMock } = vi.hoisted(() => ({
+  useHeadMock: vi.fn(),
+  useSeoMetaMock: vi.fn(),
+}))
+
+vi.stubGlobal('useHead', useHeadMock)
+vi.stubGlobal('useSeoMeta', useSeoMetaMock)
+
 describe('TahabbuPage', () => {
+  it('sets the Tahabbu page canonical URL', () => {
+    mount(TahabbuPage)
+
+    expect(useHeadMock).toHaveBeenCalledWith({
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://missiondawah.org.za/tahabbu',
+        },
+      ],
+    })
+  })
+
+  it('sets the Tahabbu page SEO title and description', () => {
+    mount(TahabbuPage)
+
+    expect(useSeoMetaMock).toHaveBeenCalledWith({
+      title: 'Tahabbu Feeding Scheme | Mission Dawah South Africa',
+      description: 'Learn how the Tahabbu project strengthens communities through compassionate, practical food support.',
+    })
+  })
+
   it('composes the shared project sections with Tahabbu content', () => {
     const wrapper = mount(TahabbuPage)
     const banner = wrapper.getComponent(ProjectBannerComponent)

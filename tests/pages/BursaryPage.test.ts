@@ -5,7 +5,37 @@ import ProjectDonationComponent from '../../app/components/ProjectDonationCompon
 import ProjectGoalComponent from '../../app/components/ProjectGoalComponent.vue'
 import BursaryPage from '../../app/pages/bursary.vue'
 
+const { useHeadMock, useSeoMetaMock } = vi.hoisted(() => ({
+  useHeadMock: vi.fn(),
+  useSeoMetaMock: vi.fn(),
+}))
+
+vi.stubGlobal('useHead', useHeadMock)
+vi.stubGlobal('useSeoMeta', useSeoMetaMock)
+
 describe('BursaryPage', () => {
+  it('sets the Bursary page canonical URL', () => {
+    mount(BursaryPage)
+
+    expect(useHeadMock).toHaveBeenCalledWith({
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://missiondawah.org.za/bursary',
+        },
+      ],
+    })
+  })
+
+  it('sets the Bursary page SEO title and description', () => {
+    mount(BursaryPage)
+
+    expect(useSeoMetaMock).toHaveBeenCalledWith({
+      title: 'Bursary Programme | Mission Dawah South Africa',
+      description: 'Learn how the Mission Dawah bursary programme helps students reduce financial barriers and continue their education.',
+    })
+  })
+
   it('composes the shared project sections with Bursary content', () => {
     const wrapper = mount(BursaryPage)
     const banner = wrapper.getComponent(ProjectBannerComponent)

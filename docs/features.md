@@ -14,7 +14,9 @@ Use this file to track future feature ideas, active work, and completed project 
 - [x] Add static pages for Tahabbu and Bursary.
 - [x] Add a responsive hamburger menu to the site header.
 - [x] Add project-specific references to the donation details.
-- [ ] Configure custom domain and DNS. Netlify provides SSL automatically.
+- [x] Configure `missiondawah.org.za` as the custom domain with Domains.co.za DNS and Netlify-managed SSL.
+- [x] Add unique SEO titles and meta descriptions to all public pages.
+- [x] Add canonical URLs using `missiondawah.org.za` to all public pages.
 - [ ] Add a contact form backed by a .NET Minimal API.
 - [ ] Containerize backend services with Docker.
 - [ ] Add PostgreSQL for future persisted data.
@@ -46,7 +48,7 @@ Use this file to track future feature ideas, active work, and completed project 
 - Phase 2: homepage built through TDD.
 - Phase 3: initial Railway deployment followed by migration to Netlify. Migration is complete.
 - Phase 4: remaining static pages.
-- Phase 5: custom domain, DNS, and SSL.
+- Phase 5: custom domain, DNS, and SSL. Complete.
 - Phase 6: contact form, .NET Minimal API, and Docker.
 - Phase 7: PayFast donations and PostgreSQL.
 

@@ -43,10 +43,20 @@ The current flow is:
 - Project: `mission-dawah-sa`.
 - GitHub repo: `Sufyaan88/mission-dawah-sa`.
 - Production branch: `release`.
-- Generated domain: `mission-dawah-sa.netlify.app`.
+- Official domain: `missiondawah.org.za`.
+- Generated Netlify domain: `mission-dawah-sa.netlify.app`.
 - Build command: `npm run build`.
 - Publish directory: `dist`.
 - Deployment is handled by Netlify's Git integration; no Netlify deploy token is stored in GitHub.
+
+## Domain and DNS
+
+- Registrar and DNS provider: Domains.co.za with Domain Protection enabled.
+- Canonical hostname: `missiondawah.org.za`.
+- `www.missiondawah.org.za` redirects to the canonical hostname.
+- The apex `A` record points to Netlify's load balancer at `75.2.60.5`.
+- The `www` `CNAME` record points to `mission-dawah-sa.netlify.app`.
+- Netlify provides and automatically renews the Let's Encrypt TLS certificate for both hostnames.
 
 The previous Railway-specific `railway.json` and `nixpacks.toml` files were removed after the migration.
 
@@ -60,7 +70,7 @@ The project was initially verified with Node `v22.15.0`, npm `10.9.2`, and Git `
 
 ## Current Implementation
 
-The site is live at `mission-dawah-sa.netlify.app`. The responsive homepage, Tahabbu page, bursary page, navigation, contact section, and footer are implemented. Reusable components and pages are covered by Vitest and Vue Test Utils tests.
+The site is live at `missiondawah.org.za`. The responsive homepage, Tahabbu page, bursary page, navigation, contact section, and footer are implemented. Each public page has a unique SEO title, meta description, and canonical URL on the official domain. Reusable components and pages are covered by Vitest and Vue Test Utils tests.
 
 ## Developer Preferences
 
