@@ -16,12 +16,13 @@ jobs:
         with:
           node-version: '22.15.0'
 
+      - name: Setup npm
+        run: npm install --global npm@11.10.1
+
       - name: Install dependencies
         run: |
-          node --version
-          npm --version
           rm -f package-lock.json
-          npm install --loglevel verbose
+          npm install
 
       - name: Run tests
         run: npm test
