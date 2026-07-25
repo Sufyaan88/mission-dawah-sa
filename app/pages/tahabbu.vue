@@ -3,6 +3,20 @@ import HadithSectionComponent from '../components/HadithSectionComponent.vue'
 import ProjectBannerComponent from '../components/ProjectBannerComponent.vue'
 import ProjectDonationComponent from '../components/ProjectDonationComponent.vue'
 import ProjectGoalComponent from '../components/ProjectGoalComponent.vue'
+
+useSeoMeta({
+  title: 'Tahabbu Feeding Scheme | Mission Dawah South Africa',
+  description: 'Learn how the Tahabbu project strengthens communities through compassionate, practical food support.',
+})
+
+useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://missiondawah.org.za/tahabbu',
+    },
+  ],
+})
 </script>
 
 <template>

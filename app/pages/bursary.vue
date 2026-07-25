@@ -3,6 +3,20 @@ import HadithSectionComponent from '../components/HadithSectionComponent.vue'
 import ProjectBannerComponent from '../components/ProjectBannerComponent.vue'
 import ProjectDonationComponent from '../components/ProjectDonationComponent.vue'
 import ProjectGoalComponent from '../components/ProjectGoalComponent.vue'
+
+useSeoMeta({
+  title: 'Bursary Programme | Mission Dawah South Africa',
+  description: 'Learn how the Mission Dawah bursary programme helps students reduce financial barriers and continue their education.',
+})
+
+useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://missiondawah.org.za/bursary',
+    },
+  ],
+})
 </script>
 
 <template>
