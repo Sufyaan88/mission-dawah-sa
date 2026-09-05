@@ -12,6 +12,8 @@ The project should help the developer grow through deliberate practice, not only
 
 AI assistance should be used as leverage for learning: explain decisions, compare concepts to familiar .NET/Blazor patterns when helpful, and support repeated explanations until the underlying ideas are understood.
 
+Respect the developer's limited review time: start each feature with a three-line plan and get one approval for the agreed work. Complete the TDD implementation and checks autonomously, then provide a concise handoff for review by another Codex before the PR. Offer deeper explanations when requested; learning should not require approving every action or reading every line of code.
+
 ## Direction
 
 - Present the project clearly to visitors.

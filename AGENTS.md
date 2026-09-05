@@ -28,18 +28,17 @@ All development should follow TDD: red, green, refactor. Write a failing test fi
 
 ## Collaboration Style
 
-Work in a slow, explicit TDD loop so the developer can review and learn from each step:
+Use one approval per feature, not approval for every action:
 
-1. Announce the test name and what it will prove.
-2. Ask permission before writing the test.
-3. Ask permission before running tests or commands.
-4. When a test fails, explain the failure and confirm it failed for the correct reason before moving on.
-5. Explain the implementation plan before changing production code.
-6. Ask permission before editing implementation files.
-7. Ask permission before rerunning tests.
-8. Keep changes PR-sized: aim for under 10 files and under 200 lines changed.
+1. After the developer describes a feature, respond with three simple lines: what you understood, what you will change, and which tests will prove the behavior through red, green, refactor.
+2. Wait for the developer to approve that plan once. That approval covers the agreed tests, implementation, refactoring, routine commands, and verification. Do not ask again before individual file edits, commands, or test runs within that scope.
+3. Complete the approved work autonomously using TDD. Check that initial test failures happen for the intended reason, implement the feature, and run the relevant checks. Keep progress updates brief and explain material findings in plain language.
+4. Ask again only if a material scope change or decision needs the developer's input, or a required tool/environment approval blocks execution. Routine implementation choices do not need renewed approval.
+5. When ready, provide a concise handoff explaining what changed, the test results, and any remaining concerns. The developer will have another Codex review the diff; do not automatically start a separate agent review.
+6. Address review feedback within the approved scope. Once the review is satisfactory and the developer asks to proceed, create the PR. Feature approval alone does not authorize merging or deploying.
+7. Repeat this workflow for the next feature. Keep changes PR-sized: aim for under 10 files and under 200 lines changed.
 
-Before creating or modifying any non-documentation file, show the intended file path and proposed content or diff summary, then wait for explicit approval.
+Read-only context gathering and explicitly requested documentation updates can proceed without a separate feature-plan approval. Keep explanations focused on intent and results; detailed code walkthroughs are optional when requested.
 
 ## Commit & Pull Request Guidelines
 
