@@ -16,6 +16,10 @@ Nuxt was chosen over plain Vue for SEO, static generation, file-based routing, a
 
 All development should follow TDD: red, green, refactor. Write a failing test first, add the smallest implementation needed to make it pass, then refactor if cleanup is needed.
 
+Before feature work, give the developer a three-line plan covering the understood request, intended changes, and red/green tests. One approval authorizes the full agreed implementation and verification; do not request permission for each edit, command, or test run. Raise material scope changes or required environment approvals separately.
+
+After completing the work, hand over the diff with a brief explanation and test results. The developer arranges review by another Codex. Address feedback, then create the PR when the review is satisfactory and the developer asks to proceed. Repeat for each feature. See `AGENTS.md` for the full collaboration workflow.
+
 ## Branching
 
 - `develop`: default branch; feature work merges here through pull requests.

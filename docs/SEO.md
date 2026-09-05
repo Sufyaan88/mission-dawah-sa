@@ -73,8 +73,8 @@ Titles and descriptions should accurately represent the visible page content. Av
 
 ## Phase 4: Technical SEO
 
-- Generate and publish `sitemap.xml` with canonical public URLs.
-- Configure `robots.txt` to allow public pages and reference the sitemap.
+- [x] Generate and publish `sitemap.xml` with canonical public URLs.
+- [x] Configure `robots.txt` to allow public pages and reference the sitemap.
 - Ensure temporary, private, or duplicate pages are not indexed.
 - Use clean, stable, descriptive routes.
 - Return correct HTTP status codes for live, redirected, and missing pages.
